@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+let marketPrice = 0
+let currencyCode = "USD"
+
+let BASE_URL = "https://blockchain.info/"
+let URL_EXCHANGE_RATES_LIST = "ticker"
+let URL_CONVERT_TO_BTC = "tobtc?currency=\(currencyCode)&value=\(marketPrice)"
