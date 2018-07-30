@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		766324FC210F2054008E2C1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766324FB210F2054008E2C1C /* AppDelegate.swift */; };
-		766324FE210F2054008E2C1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766324FD210F2054008E2C1C /* ViewController.swift */; };
+		766324FE210F2054008E2C1C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766324FD210F2054008E2C1C /* HomeVC.swift */; };
 		76632501210F2054008E2C1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766324FF210F2054008E2C1C /* Main.storyboard */; };
 		76632503210F2055008E2C1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76632502210F2055008E2C1C /* Assets.xcassets */; };
 		76632506210F2055008E2C1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76632504210F2055008E2C1C /* LaunchScreen.storyboard */; };
+		76632512210F2534008E2C1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76632511210F2534008E2C1C /* Constants.swift */; };
 		DE30CDDBE206BEA5CFB679FF /* Pods_bitcoin_ticker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E704B1E69BA19160F66BA615 /* Pods_bitcoin_ticker.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,11 +20,12 @@
 		41FE8DF5696D4909F85F7298 /* Pods-bitcoin-ticker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bitcoin-ticker.release.xcconfig"; path = "Pods/Target Support Files/Pods-bitcoin-ticker/Pods-bitcoin-ticker.release.xcconfig"; sourceTree = "<group>"; };
 		766324F8210F2054008E2C1C /* bitcoin-ticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bitcoin-ticker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766324FB210F2054008E2C1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		766324FD210F2054008E2C1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		766324FD210F2054008E2C1C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		76632500210F2054008E2C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76632502210F2055008E2C1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76632505210F2055008E2C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76632507210F2055008E2C1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76632511210F2534008E2C1C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E704B1E69BA19160F66BA615 /* Pods_bitcoin_ticker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bitcoin_ticker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F3ED7C29775BD63338DAD4 /* Pods-bitcoin-ticker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bitcoin-ticker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bitcoin-ticker/Pods-bitcoin-ticker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,14 +72,47 @@
 		766324FA210F2054008E2C1C /* bitcoin-ticker */ = {
 			isa = PBXGroup;
 			children = (
+				76632510210F2522008E2C1C /* Utilities */,
+				7663250F210F23F5008E2C1C /* Model */,
+				7663250E210F23F1008E2C1C /* View */,
+				7663250D210F23E8008E2C1C /* Controller */,
 				766324FB210F2054008E2C1C /* AppDelegate.swift */,
-				766324FD210F2054008E2C1C /* ViewController.swift */,
 				766324FF210F2054008E2C1C /* Main.storyboard */,
 				76632502210F2055008E2C1C /* Assets.xcassets */,
 				76632504210F2055008E2C1C /* LaunchScreen.storyboard */,
 				76632507210F2055008E2C1C /* Info.plist */,
 			);
 			path = "bitcoin-ticker";
+			sourceTree = "<group>";
+		};
+		7663250D210F23E8008E2C1C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				766324FD210F2054008E2C1C /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7663250E210F23F1008E2C1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7663250F210F23F5008E2C1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76632510210F2522008E2C1C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				76632511210F2534008E2C1C /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		C9298910446AE3BD3EF63D7B /* Frameworks */ = {
@@ -206,8 +241,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				766324FE210F2054008E2C1C /* ViewController.swift in Sources */,
+				766324FE210F2054008E2C1C /* HomeVC.swift in Sources */,
 				766324FC210F2054008E2C1C /* AppDelegate.swift in Sources */,
+				76632512210F2534008E2C1C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
