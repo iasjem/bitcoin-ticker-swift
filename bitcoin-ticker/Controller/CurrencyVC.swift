@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class CurrencyVC: UIViewController {
     
     @IBOutlet weak var loadingView: UIStackView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
