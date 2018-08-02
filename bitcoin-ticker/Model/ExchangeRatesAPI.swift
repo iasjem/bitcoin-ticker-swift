@@ -16,31 +16,48 @@ enum ExchangeRatesAPI {
 // MARK: TargetType Protocol Implementation
 
 extension ExchangeRatesAPI: TargetType {
-    var baseURL: URL {  return URL(string: "https://blockchain.info/")!  }
+    var baseURL: URL {  return URL(string: "https://blockchain.info")!  }
     var path: String {
         switch self {
         case .getRates:
-            return "ticker"
+            return "/ticker"
         case .convertRateToBTC(let code, let price):
-            return "tobtc?currency=\(code)&value=\(price)"
+            return "/tobtc?currency=\(code)&value=\(price)"
         }
     }
     var method: Moya.Method {
         switch self {
-        case .getRates, .convertRateToBTC(_ , _):
+        case .getRates, .convertRateToBTC:
             return .get
         }
     }
     var sampleData: Data {
-        return Data()
+        switch self {
+        case .getRates:
+            return "Get all exchange rates".utf8Encoded
+        case .convertRateToBTC(let code, let price):
+            return "tobtc?currency=\(code)&value=\(price)".utf8Encoded
+        }
     }
     var headers: [String : String]? {
         return ["Content-type": "application/json"]
     }
     var task: Task {
         switch self {
-        case .getRates, .convertRateToBTC(_ , _):
+        case .getRates:
             return .requestPlain
+        case let .convertRateToBTC(code, price):
+            return .requestParameters(parameters: ["currency": code, "value": price], encoding: URLEncoding.queryString)
         }
+    }
+}
+
+extension String {
+    var urlEscaped: String {
+        return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+    }
+    
+    var utf8Encoded: Data {
+        return data(using: .utf8)!
     }
 }
