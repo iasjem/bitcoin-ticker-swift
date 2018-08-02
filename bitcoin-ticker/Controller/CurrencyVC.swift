@@ -23,6 +23,10 @@ class CurrencyVC: UIViewController {
         viewExchangeRate()
     }
     
+    @IBAction func refreshButtonPressed(_ sender: Any) {
+        loadingData()
+        viewExchangeRate()
+    }
     
     func viewExchangeRate() {
         service.retrieveData { (success) in
