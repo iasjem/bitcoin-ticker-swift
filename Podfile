@@ -6,7 +6,6 @@ target 'bitcoin-ticker' do
   use_frameworks!
 
   # Pods for bitcoin-ticker
-	pod 'Alamofire', '~> 4.7'
 	pod 'Moya', '~> 11.0'
-	pod 'ObjectMapper', '~> 3.3'
+	pod 'SwiftyJSON', '~> 4.0'
 end

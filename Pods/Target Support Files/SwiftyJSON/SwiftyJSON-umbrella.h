@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double ObjectMapperVersionNumber;
-FOUNDATION_EXPORT const unsigned char ObjectMapperVersionString[];
+FOUNDATION_EXPORT double SwiftyJSONVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwiftyJSONVersionString[];
 
