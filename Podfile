@@ -8,4 +8,6 @@ target 'bitcoin-ticker' do
   # Pods for bitcoin-ticker
 	pod 'Moya', '~> 11.0'
 	pod 'SwiftyJSON', '~> 4.0'
+    pod 'RxSwift',    '~> 4.0'
+    pod 'RxCocoa',    '~> 4.0'
 end
