@@ -71,6 +71,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		765E20CB21132EDE008BCF28 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				76B310A62112DCFA0065E429 /* ExchangeRatesAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
 		766324EF210F2054008E2C1C = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +100,7 @@
 		766324FA210F2054008E2C1C /* bitcoin-ticker */ = {
 			isa = PBXGroup;
 			children = (
+				765E20CB21132EDE008BCF28 /* APIs */,
 				76B310AA2112FBB80065E429 /* Extensions */,
 				765647A9211002DC00285FD7 /* Services */,
 				76632510210F2522008E2C1C /* Enums */,
@@ -127,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				765647A5210FFEE300285FD7 /* Currency.swift */,
-				76B310A62112DCFA0065E429 /* ExchangeRatesAPI.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
