@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import Moya
+import Alamofire
 
 class CurrencyCell: UITableViewCell {
 
+    // MARK: Outlets
+    
     @IBOutlet weak var currencyCodeLabel: UILabel!
-    @IBOutlet weak var currencySymbolLabel: UILabel!
     @IBOutlet weak var marketPriceLabel: UILabel!
-    @IBOutlet weak var BTCLabel: UILabel!
+    
+    // MARK: Helpers
     
     func configureCell(code: String, symbol: String, price: Double) {
         currencyCodeLabel.text = code
-        currencySymbolLabel.text = symbol
-        marketPriceLabel.text = price.formatted
-        BTCLabel.text = String(0)
+        marketPriceLabel.text = "\(symbol) \(price.formatted)"
     }
 }
