@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Moya
 
 struct Currency {
     var currencyCode: String
